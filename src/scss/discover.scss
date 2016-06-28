@@ -1,0 +1,131 @@
+.discover
+{
+	font-family: $font-main;
+
+	margin-bottom: 100px;
+
+	text-align: center;
+}
+.discover__wrap
+{
+	max-width: $main-width;
+	margin: auto;
+}
+.discover__title
+{
+	font-size: 22px;
+	font-weight: bold;
+	letter-spacing: .03em;
+
+	margin: 75px 0 32px 0;
+
+	cursor: default;
+
+	color: $main-dark;
+}
+.discover__intro
+{
+	font-family: $font-assist;
+	font-size: 18px;
+	font-weight: 300;
+
+	margin: 36px 0 36px 0;
+
+	color: $main-dark;
+}
+.discover__input
+{
+	font-family: $font-assist;
+	font-weight: 300;
+
+	box-sizing: border-box;
+	min-width: 240px;
+	height: 40px;
+	margin-right: 10px;
+	padding: 0 14px;
+
+	color: $main-dark*3;
+	border: 1px solid $main-grey;
+	@include border-radius(4px);
+	outline-style: none;
+	box-shadow: 0 1px #eee;
+}
+.discover__button
+{
+	font-family: $font-main;
+	font-size: $text-size;
+	font-weight: bold;
+
+	display: inline-block;
+	outline: none;
+
+	min-width: 160px;
+	height: 40px;
+
+	padding: 1px 10px;
+
+	cursor: pointer;
+	transition: 1.5s;
+	vertical-align: middle;
+	text-decoration: none;
+
+	color: $main-white;
+	border: 2px solid transparent;
+	@include border-radius(20px);
+	background-color: $main-red;
+
+	&:hover
+	{
+		transition: .8s;
+		@include scale(0.96, 0.96);
+
+		color: $main-red;
+		border: 2px solid $main-red;
+		background-color:$main-white;
+	}
+}
+
+/*--------------------discover media--------------------*/
+@media all and (max-width: 939px)
+{
+	.discover__wrap
+	{
+		box-sizing: border-box;
+		max-width: 768px;
+		padding: 0 10px;
+	}
+	.discover__intro
+	{
+		margin-top: 34px;
+	}
+}
+@media all and (max-width: 767px)
+{
+	.discover
+	{
+		margin-bottom: 40px;
+	}
+	.discover__wrap
+	{
+		width: 320px;
+		padding: 0 10px;
+	}
+	.discover__title
+	{
+		margin: 29px 0 10px 0;
+	}
+	.discover__intro
+	{
+		margin: 10px 0 15px 0;
+	}
+	.discover__input
+	{
+		width: 280px;
+		margin: 0 0 10px 0;
+	}
+	.discover__button
+	{
+		width: 280px;
+	}
+}
+/*-----------------END of DISCOVER-----------------*/

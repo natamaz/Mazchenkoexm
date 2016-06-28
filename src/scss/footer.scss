@@ -1,0 +1,180 @@
+.footer
+{
+	font-family: $font-main;
+
+	@include border(top, 4px, solid, #ff4e50);
+}
+.footer__wrap
+{
+	overflow: hidden;
+
+	max-width: $main-width;
+	margin: auto;
+	padding: 38px 0;
+}
+.footer__logo
+{
+	font-family: inherit;
+	font-size: 16px;
+	font-weight: bold;
+
+	float: left;
+
+	width: 220px;
+	margin-right: 20px;
+
+	cursor: default;
+	letter-spacing: .05em;
+	text-transform: uppercase;
+
+	color: $main-red;
+}
+.footer__item
+{
+	float: left;
+
+	width: 140px;
+	margin-right: 20px;
+}
+.footer__title
+{
+	font-size: $text-size;
+	font-weight: bold;
+
+	margin: 0 0 10px 0;
+
+	cursor: default;
+
+	color: $main-dark;
+}
+.footer__author
+{
+	float: right;
+
+	max-width: 220px;
+}
+.list
+{
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+.list__item
+{
+	line-height: 23px;
+}
+.list__link
+{
+	font-family: $font-assist;
+	font-size: $text-size;
+	font-weight: 300;
+
+	text-decoration: none;
+
+	color: $main-dark*2;
+	&:hover
+	{
+		text-decoration: underline;
+	}
+}
+.author
+{
+	text-align: right;
+}
+.author__by
+{
+	font-size: 10px;
+	font-weight: bold;
+
+	vertical-align: top;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+
+	color: $main-grey;
+}
+.author__logo
+{
+	display: block;
+
+	width: 110px;
+}
+@media all and (max-width: 939px)
+{
+	.footer__wrap
+	{
+		box-sizing: border-box;
+		max-width: 768px;
+		padding: 36px 10px;
+	}
+	.footer__logo
+	{
+		width: 206px;
+		padding-left: 30px;
+	}
+	.footer__item
+	{
+		width: 152px;
+		&:nth-child(3)
+		{
+			margin-right: 0;
+		}
+	}
+	.footer__author
+	{
+		padding-right: 30px;
+	}
+}
+@media all and (max-width: 767px)
+{
+	.footer__wrap
+	{
+		width: 320px;
+		padding: 16px 10px;
+
+		text-align: center;
+	}
+	.footer__logo,
+	.footer__item,
+	.footer__author
+	{
+		float: none;
+
+		width: 100%;
+		max-width: 300px;
+		margin-right: 0;
+		padding: 0;
+	}
+	.footer__title
+	{
+		margin: 11px 0 0 0;
+	}
+	.author
+	{
+		margin-top: 18px;
+	}
+	.list
+	{
+		overflow: hidden;
+
+		margin: auto;
+	}
+	.list__item
+	{
+		display: inline-block;
+	}
+	.list__link
+	{
+		display: block;
+
+		margin: auto 5px;
+	}
+	.author
+	{
+		display: inline-block;
+
+		max-width: 110px;
+
+		text-align: center;
+	}
+}

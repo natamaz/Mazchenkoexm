@@ -1,0 +1,141 @@
+@font-face {
+	font-family: 'Montserrat', sans-serif;
+	src: url(fonts/Montserrat-Regular.ttf), url(fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+	font-family: 'Roboto', sans-serif;
+	src: url(fonts/Roboto-Regular.ttf), url(fonts/Roboto-Light.ttf), url(fonts/Roboto-Bold.ttf);
+}
+@font-face {
+	font-family: 'fontello';
+	src: url('fonts/fontello.eot?50573067');
+	src: url('fonts/fontello.eot?50573067#iefix') format('embedded-opentype'),
+		url('fonts/fontello.woff?50573067') format('woff'),
+		url('fonts/fontello.ttf?50573067') format('truetype'),
+		url('fonts/fontello.svg?50573067#fontello') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+@import "mixin.scss";
+@import "variable.scss";
+@import "promo.scss";
+@import "about.scss";
+@import "partners.scss";
+@import "ideas.scss";
+@import "discover.scss";
+@import "footer.scss";
+
+/*==============================START of SCROLL=============================*/
+
+.b-top {
+	z-index: 2600;
+	position: fixed;
+	left: 0px;
+	bottom: 100px;
+	width: 35%;
+	margin-left: 50%;
+	opacity: 0.2;
+	filter: alpha(opacity=20);
+	&:hover {
+		opacity: 1;
+		filter: alpha(opacity=100);
+		cursor: pointer;
+	}
+}
+
+.b-top-but {
+	z-index: 2600;
+	position: absolute;
+	display: block;
+	left: 70px;
+	top: 0;
+	margin: 0 0 0 100%;
+	padding: 32px 12px 4px;
+	color: $main-white;
+	border-radius: 7px;
+	background: $main-red url(../img/b-top.png) 50% 11px no-repeat;
+}
+
+@media all and (max-width: 939px) {
+	.b-top {
+		width: 30%;
+	}
+}
+
+@media all and (max-width: 767px) {
+	.b-top {
+		width: 5%;
+	}
+	.b-top-but {
+		left: 60px;
+	}
+}
+
+
+/*==============================START of fancybox=============================*/
+
+.fancybox-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $main-dark/3;
+	opacity: 0.8;
+}
+
+.modal-wrap:before {
+	content: '';
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.modal-wrap {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	bottom: 100px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+}
+
+.fancybox-modal {
+	display: inline-block;
+	vertical-align: middle;
+	border: 10px solid #735F5F;
+	border-radius: 5px;
+	-webkit-box-shadow: 10px 6px 49px 1px rgba(0, 0, 0, 1);
+	-moz-box-shadow: 10px 6px 49px 1px rgba(0, 0, 0, 1);
+	box-shadow: 10px 6px 49px 1px rgba(0, 0, 0, 1);
+	text-align: center;
+	cursor: pointer;
+	img {
+		max-width: 640px;
+		max-height: 480px;
+		vertical-align: middle;
+	}
+}
+@media all and (max-width: 767px) {
+	.fancybox-modal {
+		img {
+			max-width: 240px;
+			max-height: 320px;
+		}
+	}
+}
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
